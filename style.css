@@ -1,0 +1,286 @@
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400 !important;
+    line-height: 20px;
+    font-size: 1rem;
+    color: #303137;
+    margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img, .w3-section {
+    width:100%;
+    height:100vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    position: absolute;
+    font-weight: 600;
+    -webkit-text-fill-color: #f1f1f1;
+    padding: 10px 0 0 0;
+    max-width: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;  
+    z-index: 1;         
+}
+.brand {
+    margin-right: auto;
+    margin-left: 5%;
+    font-size: 1.8rem;
+}
+
+.brand, .nav-link {
+    text-transform: uppercase;
+}
+
+nav ul {
+    margin: 0;
+    margin-right: 5rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav li {
+    list-style: none; 
+}
+
+.nav-link {
+    padding-left: 20px;
+    text-decoration: none;
+    display: none;
+    padding-top: 10px;
+}
+a:visited {
+    -webkit-text-fill-color: #f1f1f1; 
+}
+ul.topnav.responsive {
+    text-align: right;
+}
+
+ul.topnav.responsive li {
+    position: relative;
+
+}
+
+ul.responsive li a.nav-link {
+    display: block;
+}
+
+
+nav li:hover {
+    -webkit-text-fill-color: #00BAE3;
+}
+
+.dropdownlink, .fab, .fas {
+    padding-left: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.fa-instagram, .fa-twitter, .fa-bars {
+    font-size: 1.5rem;
+}
+
+.dropdownlink:hover {
+    -webkit-text-fill-color: #00BAE3;
+}
+
+.brand span {
+    -webkit-text-fill-color: #00BAE3;
+}
+
+#w3-content {
+    position: relative;
+    text-align: center;
+    color: #e3e3e3;
+}
+
+#profile-pic {
+    height: 100%;
+}
+
+#about {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+  }
+  
+  #about-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #about-right {
+    flex: 1;
+  }
+
+  #about-desc {
+    width: 80%;
+    margin: 10% auto 0 auto;
+    line-height: 2.5rem;
+  }
+
+  .contact-info {
+    padding: 1%;
+    text-align: center;
+    background-color: #00BAE3;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+  }
+
+/* --- Gallery Page CSS --- */
+#gallery-nav {
+    background-color: #0e0e0e;
+}
+#gallery-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+    height: 100vh;
+    background-color: #0e0e0e;
+    color: white;
+  }
+  
+#gallery-left {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #gallery-right {
+    flex: 1;
+    margin: auto;
+    flex-direction: row;
+  }
+
+  #gallery-desc {
+    width: 80%;
+    margin: 10% auto 10% auto;
+    line-height: 2.5rem;
+  }
+
+/*  
+    MEDIA QUERIES 
+    When screen width gets around 100px change the gallery to 50vh.
+    around a width of a mobile phone like like 400px - 800px wide, 
+    make sure the dropdown behaves properly and make sure the icons for social media
+    behave look okay
+
+    Make sure About Section stacks ad mobile width
+*/
+
+@media (max-width: 800px) {
+    .brand {
+        margin-right: auto;
+        margin-left: 10%;
+        font-size: 1rem;  
+    }
+
+    /* ul.topnav.responsive {
+        padding-right: 2.5rem;
+    } */
+
+    .nav-link {
+        padding-left: 10px;
+        text-decoration: none;
+    }
+
+    #profile-pic {
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    #about {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      #about-left {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      #about-right {
+        flex: 1;
+      }
+    
+      #about-desc {
+        width: 80%;
+        margin: 10px auto 0 auto;
+        line-height: 2.5rem;
+      }
+
+      /* --- Gallery Page CSS --- */
+    #gallery-nav {
+        background-color: #0e0e0e;
+    }
+    #gallery-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow: hidden;
+    }
+
+    #gallery {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 0;
+        height: 100vh;
+        background-color: #0e0e0e;
+        color: white;
+        padding: 10% 0;
+    }
+    
+    #gallery-left {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #gallery-right {
+        flex: 1;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    #gallery-desc {
+        width: 80%;
+        margin: 10% auto 10px auto;
+        line-height: 1.23rem;
+    }
+}
